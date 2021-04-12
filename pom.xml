@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.baomidou</groupId>
+    <groupId>com.tgm</groupId>
     <artifactId>mybatisplus-maven-plugin</artifactId>
     <version>1.0.0</version>
     <packaging>maven-plugin</packaging>
@@ -12,9 +12,9 @@
     <url>https://github.com/baomidou/mybatisplus-maven-plugin</url>
     <developers>
         <developer>
-            <name>YangHu</name>
-            <email>althyman@gmail.com</email>
-            <organization>baomidou</organization>
+            <name>chentao</name>
+            <email>2363359455@qq.com</email>
+            <organization>tgm</organization>
         </developer>
     </developers>
     <description>Mybatis-plus框架代码生成器</description>
@@ -109,7 +109,7 @@
             <plugin>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatisplus-maven-plugin</artifactId>
-                <version>1.0.0</version>
+                <version>1.0</version>
                 <configuration>
                     <!-- 输出目录(默认java.io.tmpdir) -->
                     <outputDir>/Users/cxdev/Documents</outputDir>
