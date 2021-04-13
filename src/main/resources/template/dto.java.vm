@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 #if(${table.hasDate})
 import java.util.Date;
-import lombok.Data;
 #end
 
 /**
@@ -17,7 +16,6 @@ import lombok.Data;
  * @since ${date}
  */
 @TableName("${table.name}")
-@Data
 public class ${entity} implements Serializable {
 
 
