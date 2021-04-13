@@ -88,6 +88,8 @@ public class GenerateMojo extends AbstractGenerateMojo {
             ctx.put("enableCache", isEnableCache());
             ctx.put("author", getAuthor());
             ctx.put("date", date);
+            ctx.put("userInfo",config.getUserInfo());
+            ctx.put("fileList",config.getFileList());
             ctxData.put(tableInfo.getEntityName(), ctx);
         }
         return ctxData;
@@ -121,6 +123,10 @@ public class GenerateMojo extends AbstractGenerateMojo {
         outputFiles.put(ConstVal.XML, pathInfo.get(ConstVal.XML_PATH) + ConstVal.XML_NAME);
         outputFiles.put(ConstVal.SERIVCE, pathInfo.get(ConstVal.SERIVCE_PATH) + ConstVal.SERVICE_NAME);
         outputFiles.put(ConstVal.SERVICEIMPL, pathInfo.get(ConstVal.SERVICEIMPL_PATH) + ConstVal.SERVICEIMPL_NAME);
+        outputFiles.put(ConstVal.DTO, pathInfo.get(ConstVal.DTO_PATH) + ConstVal.DTO_NAME);
+        outputFiles.put(ConstVal.MODEL, pathInfo.get(ConstVal.MODEL_PATH) + ConstVal.MODEL_NAME);
+
+
     }
 
     /**
@@ -135,6 +141,8 @@ public class GenerateMojo extends AbstractGenerateMojo {
             String xmlFile = String.format(outputFiles.get(ConstVal.XML), entityName);
             String serviceFile = String.format(outputFiles.get(ConstVal.SERIVCE), entityName);
             String implFile = String.format(outputFiles.get(ConstVal.SERVICEIMPL), entityName);
+            String dtoFile = String.format(outputFiles.get(ConstVal.DTO), entityName);
+            String modelFile = String.format(outputFiles.get(ConstVal.MODEL), entityName);
 
             // 根据override标识来判断是否需要创建文件
             if (isCreate(entityFile)) {
@@ -151,6 +159,12 @@ public class GenerateMojo extends AbstractGenerateMojo {
             }
             if (isCreate(implFile)) {
                 vmToFile(context, ConstVal.TEMPLATE_SERVICEIMPL, implFile);
+            }
+            if (isCreate(dtoFile)) {
+                vmToFile(context, ConstVal.TEMPLATE_DTO, implFile);
+            }
+            if (isCreate(modelFile)) {
+                vmToFile(context, ConstVal.TEMPLATE_MODEL, implFile);
             }
         } catch (IOException e) {
             e.printStackTrace();

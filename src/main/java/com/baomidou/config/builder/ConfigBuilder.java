@@ -45,7 +45,10 @@ public class ConfigBuilder {
      * 数据库表信息
      */
     private List<TableInfo> tableInfoList;
-
+    /**
+     * 数据库表信息
+     */
+    private List<List> fileList;
     /**
      * 包配置详情
      */
@@ -55,7 +58,10 @@ public class ConfigBuilder {
      */
     private Map<String, String> pathInfo;
 
-
+    /**
+     * 路径配置信息
+     */
+    private Map<String, String> userInfo;
     /**
      * 在构造器中处理配置
      *
@@ -474,5 +480,21 @@ public class ConfigBuilder {
             return name.substring(0, 1).toUpperCase() + name.substring(1);
         }
         return "";
+    }
+
+    public List<List> getFileList() {
+        return fileList;
+    }
+
+    public void setFileList(List<List> fileList) {
+        this.fileList = fileList;
+    }
+
+    public Map<String, String> getUserInfo() {
+        return userInfo;
+    }
+
+    public void setUserInfo(Map<String, String> userInfo) {
+        this.userInfo = userInfo;
     }
 }

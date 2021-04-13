@@ -14,6 +14,8 @@ public class ConstVal {
     public static final String ENTITY = "Entity";
     public static final String SERIVCE = "Service";
     public static final String SERVICEIMPL = "ServiceImpl";
+    public static final String DTO = "Dto";
+    public static final String MODEL = "Model";
     public static final String MAPPER = "Mapper";
     public static final String XML = "Xml";
 
@@ -22,6 +24,8 @@ public class ConstVal {
     public static final String SERVICEIMPL_PATH = "serviceimpl_path";
     public static final String MAPPER_PATH = "mapper_path";
     public static final String XML_PATH = "xml_path";
+    public static final String DTO_PATH = "dto_path";
+    public static final String MODEL_PATH = "MODEL_path";
 
     public static final String JAVA_TMPDIR = "java.io.tmpdir";
     public static final String UTF8 = Charset.forName("UTF-8").name();
@@ -35,12 +39,17 @@ public class ConstVal {
     public static final String TEMPLATE_XML = "/template/mapper.xml.vm";
     public static final String TEMPLATE_SERVICE = "/template/service.java.vm";
     public static final String TEMPLATE_SERVICEIMPL = "/template/serviceImpl.java.vm";
+    public static final String TEMPLATE_DTO = "/template/dto.java.vm";
+    public static final String TEMPLATE_MODEL = "/template/model.java.vm";
 
     public static final String ENTITY_NAME = File.separator + "%s" + JAVA_SUFFIX;
     public static final String MAPPER_NAME = File.separator + "%s" + MAPPER + JAVA_SUFFIX;
     public static final String XML_NAME = File.separator + "%s" + MAPPER + XML_SUFFIX;
     public static final String SERVICE_NAME = File.separator + "I%s" + SERIVCE + JAVA_SUFFIX;
     public static final String SERVICEIMPL_NAME = File.separator + "%s" + SERVICEIMPL + JAVA_SUFFIX;
+    public static final String DTO_NAME = File.separator + "%s" + DTO + JAVA_SUFFIX;
+    public static final String MODEL_NAME = File.separator + "%s" + MODEL + JAVA_SUFFIX;
+
 
     // 配置使用classloader加载资源
     public static final String VM_LOADPATH_KEY = "file.resource.loader.class";
